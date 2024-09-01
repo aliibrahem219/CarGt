@@ -1,0 +1,62 @@
+.create-note {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+.create-note-form-group {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: fit-content;
+  width: 700px;
+  background-color: var(--white-color);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.create-note-form-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: var(--red-color);
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.create-note-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.create-note-form-group input {
+  padding: 10px;
+  border: 1px solid var(--gray-color);
+  border-radius: 10px;
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+.create-note-btn {
+  cursor: pointer;
+  border: none;
+  background-color: var(--green-color);
+  width: 100%;
+  font-size: 21px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--white-color);
+}

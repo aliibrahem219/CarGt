@@ -1,0 +1,33 @@
+.wating-posts-page {
+  display: flex;
+  align-items: center;
+
+  padding: 30px;
+}
+.wating-posts-notfound {
+  height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wating-posts-notfound p {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--red-color);
+}
+/*Media Queries*/
+@media (max-width: 990px) {
+  .wating-posts-page {
+    flex-direction: column;
+    align-items: center;
+  }
+  .wating-posts-notfound p {
+    font-size: 30px;
+    padding: 15px;
+  }
+}
+@media (max-width: 520px) {
+  .wating-posts-page {
+    padding: 15px;
+  }
+}

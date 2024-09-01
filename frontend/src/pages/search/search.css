@@ -1,0 +1,129 @@
+.search-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.search-part {
+  padding: 30px;
+  width: 40%;
+}
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: var(--primary-color);
+}
+.searchTerm-div {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.search-label {
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.searchTerm-input {
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+}
+.checkbok-div {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  gap: 3px;
+}
+.checkbox-element {
+  width: 15px;
+}
+.select-search {
+  width: 30%;
+  padding: 5px;
+  border-radius: 10px;
+}
+.search-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.offers-results-continer {
+  width: 60%;
+}
+
+.offers-result-title {
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--secondary-color);
+}
+.offers-results {
+  display: flex;
+}
+.offers-results .offer-item {
+  width: 49%;
+  flex-wrap: wrap;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.offers-results .offer-item:hover {
+  transform: scale(1.005);
+}
+.not-found-offers {
+  color: var(--red-color);
+}
+.loading-offers {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+.showMore-button {
+  color: var(--green-sea-color);
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.showMore-button:hover {
+  text-decoration: underline;
+}
+.more-details-label {
+  font-size: 20px;
+  font-weight: 600;
+}
+/*Media Queries*/
+@media (max-width: 990px) {
+  .search-container {
+    flex-direction: column;
+  }
+  .search-part {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .offers-results-continer {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-label {
+    font-size: 15px;
+  }
+  .offers-result-title {
+    text-align: center;
+  }
+  .offers-results .offer-item {
+    width: 100%;
+  }
+}

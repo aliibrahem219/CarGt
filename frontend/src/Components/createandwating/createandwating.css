@@ -1,0 +1,25 @@
+.create-link-container,
+.wating-link-container {
+  border: 1px solid var(--dark-color);
+  padding: 10px;
+  margin: 15px;
+  border-radius: 10px;
+}
+.create-link,
+.wating-link {
+  margin: 12px;
+  cursor: pointer;
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+.create-link:hover,
+.wating-link:hover {
+  color: var(--pumpkin-color);
+}
+
+.create-link i,
+.wating-link i {
+  margin-right: 3px;
+  font-size: 24px;
+}

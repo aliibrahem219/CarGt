@@ -1,0 +1,25 @@
+.making-company {
+  height: calc(100vh -130px);
+  padding: 20px;
+}
+.making-company-title {
+  margin-bottom: 15px;
+  font-size: 30px;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--gray-color);
+  padding-bottom: 5px;
+  width: max-content;
+}
+.making-company-not-found {
+  font-size: 30px;
+  margin: 20px 0;
+  color: var(--dark-color);
+}
+.making-company-not-found span {
+  color: var(--red-color);
+}
+.making-company-not-found-link {
+  font-size: 21px;
+  font-weight: 500;
+  text-decoration: underline;
+}

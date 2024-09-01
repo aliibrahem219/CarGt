@@ -1,0 +1,30 @@
+.card-container {
+  background-color: transparent;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 30px;
+  border: 1px solid var(--pumpkin-color);
+  cursor: pointer;
+  transition: 0.5s;
+  margin: 20px 10px;
+  box-shadow: 3px 3px 3px var(--pumpkin-color);
+}
+.card-container:hover {
+  transform: scale(1.1);
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2;
+  margin-left: 10px;
+}
+.card-title {
+  color: var(--white-color);
+}
+/*Media Queries*/
+@media (max-width: 990px) {
+}
+@media (max-width: 520px) {
+  .card-container {
+  }
+}

@@ -1,0 +1,79 @@
+.update-offer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+.update-offer-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 700px;
+  background-color: var(--white-color);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 10px;
+  overflow: auto;
+}
+.update-offer-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.update-offer-form-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: var(--red-color);
+  cursor: pointer;
+  font-size: 30px;
+}
+.update-offer-title {
+  margin-bottom: 10px;
+  color: var(--green-sea-color);
+  font-size: 17px;
+  text-align: center;
+}
+.update-offer-input,
+.update-offer-textarea {
+  width: 100%;
+  border-radius: 10px;
+  font-size: 15px;
+  border: 1px solid var(--gray-color);
+  padding: 10px;
+  margin: 10px 0;
+}
+.update-offer-btn {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--pumpkin-color);
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--white-color);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+/*Media Queries*/
+@media (max-width: 520px) {
+  .update-offer-form {
+    width: 90%;
+  }
+
+  .update-offer-container {
+    flex-direction: column;
+  }
+}

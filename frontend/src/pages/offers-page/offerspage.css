@@ -1,0 +1,17 @@
+.offers-page {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px;
+}
+/*Media Queries*/
+@media (max-width: 990px) {
+  .offers-page {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 520px) {
+  .offers-page {
+    padding: 15px;
+  }
+}

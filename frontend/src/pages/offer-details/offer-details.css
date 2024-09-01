@@ -1,0 +1,240 @@
+.offer-details {
+  width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+.offer-details-image-wrapper {
+  height: 500px;
+  margin-bottom: 30px;
+}
+.offer-details-image-wrapper-swapper {
+  height: 450px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offer-details-image-wrapper-swapper i {
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.offer-details-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.update-offer-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--blue-color);
+  cursor: pointer;
+}
+.update-offer-label i {
+  font-size: 23px;
+  margin-right: 3px;
+}
+.update-offer-image-form button {
+  margin-left: 10px;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+  padding: 2px 5px;
+  border: 1px solid var(--blue-color);
+}
+.offer-details-title {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 10px 0;
+}
+.offer-details-carName {
+  font-size: 50px;
+  color: var(--primary-color);
+}
+.offer-details-make {
+  font-size: 20px;
+  color: var(--gray-color);
+}
+.offer-details-user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.offer-details-user-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.offer-details-user {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.offer-details-user strong {
+  font-size: 21px;
+  color: var(--dark-color);
+}
+.offer-details-user span {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--gray-color);
+}
+.offer-details-description {
+  font-size: 21px;
+  line-height: 1.8;
+  color: var(--primary-color);
+}
+.offer-details-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+.offer-details-icon-wrapper {
+  margin: 15px;
+  font-size: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--blue-color);
+}
+.offer-details-icon-wrapper i {
+  cursor: pointer;
+}
+
+.offer-detalils-btn-top-and-hightlighting {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.offer-detalils-btn-top-and-hightlighting button {
+  width: 30%;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--green-sea-color);
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--white-color);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.offer-detalils-btn-contact {
+  width: 30%;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--pumpkin-color);
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white-color);
+  border-radius: 10px;
+
+  margin: 10px;
+}
+.offer-detalils-btn-cancel-booking {
+  width: 30%;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--red-color);
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white-color);
+  border-radius: 10px;
+
+  margin: 10px;
+}
+.offer-detalils-not-log-in {
+  margin: 10px auto;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--red-color);
+}
+.offer-more-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  margin: 10px;
+}
+
+.ul-detalis-titles {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.ul-detalis-info {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gray-color);
+}
+.offer-more-details li {
+  padding: 5px;
+}
+.price-li {
+  color: var(--red-color);
+}
+.offer-more-detalils-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid var(--pumpkin-color);
+  box-shadow: 3px 3px 3px var(--pumpkin-color);
+  margin: 10px;
+  border-radius: 10px;
+}
+.offer-more-detalils-container li {
+  margin: 4px;
+}
+/*Media Queries*/
+@media (max-width: 820px) {
+  .offer-details {
+    width: 100%;
+  }
+  .offer-details-image {
+    width: 80%;
+  }
+}
+@media (max-width: 520px) {
+  .offer-details {
+    padding: 25px;
+  }
+
+  .offer-details-image {
+    width: 80%;
+    height: 100%;
+  }
+  .offer-more-detalils-container {
+    flex-direction: column;
+  }
+  .offer-more-details {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .offer-details-buttons {
+    flex-direction: column;
+  }
+  .offer-details-icon-wrapper {
+    margin-bottom: 2px;
+  }
+  .offer-detalils-btn-contact {
+    width: 90%;
+    margin: 5px auto;
+  }
+  .offer-detalils-btn-cancel-booking {
+    width: 90%;
+    margin: 5px auto;
+  }
+}

@@ -1,0 +1,33 @@
+.waiting-offers-page {
+  display: flex;
+  align-items: center;
+
+  padding: 30px;
+}
+.waiting-offers-notfound {
+  height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.waiting-offers-notfound p {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--red-color);
+}
+/*Media Queries*/
+@media (max-width: 990px) {
+  .waiting-offers-page {
+    flex-direction: column;
+    align-items: center;
+  }
+  .waiting-offers-notfound p {
+    font-size: 30px;
+    padding: 15px;
+  }
+}
+@media (max-width: 520px) {
+  .waiting-offers-page {
+    padding: 15px;
+  }
+}
