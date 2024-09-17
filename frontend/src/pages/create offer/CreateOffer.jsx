@@ -31,7 +31,7 @@ const CreateOffer = () => {
   const [sunRoof, setSunRoof] = useState(false);
   const [centralLocking, setCentralLocking] = useState(false);
   const [price, setPrice] = useState("");
-  //const [file, setFile] = useState(null);
+
   const [files, setFiles] = useState([]);
 
   //Form Submit Handler
@@ -53,7 +53,7 @@ const CreateOffer = () => {
     if (price.trim() === "") return toast.error("Car price is required");
     if (city.trim() === "") return toast.error("Offer City is required");
     if (!files) return toast.error("Offer file is required");
-    //if (!file) return toast.error("Offer file is required");
+
     //we need to send this form to sever as a form data because we have an image so it isn't a normal form
     const formData = new FormData();
     //image is the name of the file on the server
@@ -80,7 +80,6 @@ const CreateOffer = () => {
     formData.append("gearbox", gearbox);
     formData.append("price", price);
 
-    //console.log(formData);
     // send form data to server
     swal({
       title: "Are you sure?",
@@ -348,7 +347,6 @@ const CreateOffer = () => {
           className="create-offer-upload"
           onChange={(e) => {
             setFiles(e.target.files);
-            //setFile(e.target.files[0]);
           }}
           accept="image/*"
           multiple

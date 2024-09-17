@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-//we put actions and states here
+
 const carsCategorySlice = createSlice({
   name: "carsCategory",
   initialState: {
     carsCategories: [],
     carsCategoriesCount: null,
   },
-  //we put actions that effect on states in reducers
+
   reducers: {
     setCarsCategories(state, actions) {
       state.carsCategories = actions.payload;

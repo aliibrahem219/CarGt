@@ -129,34 +129,9 @@ module.exports.getAllOffersSearchCtrl = asyncHandler(async (req, res) => {
   let color = req.query.color || "";
   let city = req.query.city || "";
   let year = req.query.year || 1990;
-  let distance = req.query.distance || 0;
   let price_from = req.query.price_from || 20000000;
-  let price_to = req.query.price_to || 2000000000;
+
   let carName = req.query.carName || "";
-  let ABS = req.query.ABS;
-  if (ABS === undefined || ABS === "false") {
-    ABS = { $in: [false, true] };
-  }
-  let cdPlayer = req.query.cdPlayer;
-  if (cdPlayer === undefined || cdPlayer === "false") {
-    cdPlayer = { $in: [false, true] };
-  }
-  let electricWindows = req.query.electricWindows;
-  if (electricWindows === undefined || electricWindows === "false") {
-    electricWindows = { $in: [false, true] };
-  }
-  let fogLamp = req.query.fogLamp;
-  if (fogLamp === undefined || fogLamp === "false") {
-    fogLamp = { $in: [false, true] };
-  }
-  let sunRoof = req.query.sunRoof;
-  if (sunRoof === undefined || sunRoof === "false") {
-    sunRoof = { $in: [false, true] };
-  }
-  let centralLocking = req.query.centralLocking;
-  if (centralLocking === undefined || centralLocking === "false") {
-    centralLocking = { $in: [false, true] };
-  }
 
   const offers = await Offer.find({
     carName: { $regex: carName, $options: "i" },
@@ -164,19 +139,9 @@ module.exports.getAllOffersSearchCtrl = asyncHandler(async (req, res) => {
     make: { $regex: make, $options: "i" },
     color: { $regex: color, $options: "i" },
     city: { $regex: city, $options: "i" },
-    // distance: { $lte: distance },
     gearbox,
     fualType,
-    /* ABS,
-    cdPlayer,
-    electricWindows,
-    fogLamp,
-    sunRoof,
-    centralLocking,*/
     isAccepted: true,
-    //price: {
-    //  $lte: parseInt(price_to),
-    //},
     price: {
       $gte: parseInt(price_from),
     },

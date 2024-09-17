@@ -19,9 +19,8 @@ export function fetchPosts(pageNumber) {
 export function getPostsCount() {
   return async (dispatch) => {
     try {
-      //axios is a light library that we can use it insted of featch
       const { data } = await request.get(`/api/post/count`);
-      //the data is the payload for action
+
       dispatch(postActions.setPostsCount(data));
     } catch (error) {
       console.log(error.message);
@@ -68,9 +67,8 @@ export function createPost(newPost) {
 export function fetchSinglePost(postId) {
   return async (dispatch) => {
     try {
-      //axios is a light library that we can use it insted of featch
       const { data } = await request.get(`/api/post/${postId}`);
-      //the data is the payload for action
+
       dispatch(postActions.setPost(data));
     } catch (error) {
       console.log(error.message);
@@ -91,7 +89,7 @@ export function toggleLikePost(postId) {
           },
         }
       );
-      //the data is the payload for action
+
       dispatch(postActions.setLike(data));
     } catch (error) {
       toast.error(error.response.data?.message);
@@ -103,7 +101,6 @@ export function toggleLikePost(postId) {
 export function updatePostImage(newImage, postId) {
   return async (dispatch, getState) => {
     try {
-      //axios is a light library that we can use it insted of featch
       await request.put(`/api/post/update-image/${postId}`, newImage, {
         headers: {
           Authorization: "Bearer " + getState().auth.user.token,
@@ -122,7 +119,6 @@ export function updatePost(newPost, postId) {
   return async (dispatch, getState) => {
     console.log(newPost);
     try {
-      //axios is a light library that we can use it insted of featch
       const { data } = await request.put(`/api/post/${postId}`, newPost, {
         headers: {
           Authorization: "Bearer " + getState().auth.user.token,
@@ -156,9 +152,8 @@ export function deletePost(postId) {
 export function getALLPosts() {
   return async (dispatch) => {
     try {
-      //axios is a light library that we can use it insted of featch
       const { data } = await request.get(`/api/post`);
-      //the data is the payload for action
+
       dispatch(postActions.setPosts(data));
     } catch (error) {
       console.log(error.message);
@@ -189,7 +184,7 @@ export function getALLPostsAdmin() {
           Authorization: "Bearer " + getState().auth.user.token,
         },
       });
-      //the data is the payload for action
+
       dispatch(postActions.setPosts(data));
     } catch (error) {
       console.log(error.message);

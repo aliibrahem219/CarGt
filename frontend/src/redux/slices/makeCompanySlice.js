@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-//we put actions and states here
+
 const makeCompanySlice = createSlice({
   name: "makeCompany",
   initialState: {
     makeCompanies: [],
     makeCompaniesCount: null,
   },
-  //we put actions that effect on states in reducers
+
   reducers: {
     setMakeCompanies(state, actions) {
       state.makeCompanies = actions.payload;

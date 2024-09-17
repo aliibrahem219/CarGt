@@ -27,15 +27,8 @@ export default function Search() {
     year: "",
     color: "",
     city: "",
-    distance: 0,
+
     price_from: "",
-    price_to: "",
-    ABS: false,
-    cdPlayer: false,
-    electricWindows: false,
-    fogLamp: false,
-    sunRoof: false,
-    centralLocking: false,
   });
   useEffect(() => {
     dispatch(fetchCategories());
@@ -82,14 +75,7 @@ export default function Search() {
         year,
       });
     }
-    if (e.target.id === "distance") {
-      const distance = e.target.value;
 
-      setSidebardata({
-        ...sidebardata,
-        distance,
-      });
-    }
     if (e.target.id === "color") {
       const color = e.target.value;
       setSidebardata({
@@ -104,61 +90,12 @@ export default function Search() {
         city,
       });
     }
-    if (e.target.id === "ABS") {
-      const ABS = e.target.value;
-      setSidebardata({
-        ...sidebardata,
-        ABS,
-      });
-    }
-    if (e.target.id === "cdPlayer") {
-      const cdPlayer = e.target.value;
-      setSidebardata({
-        ...sidebardata,
-        cdPlayer,
-      });
-    }
-    if (e.target.id === "electricWindows") {
-      const electricWindows = e.target.value;
-      setSidebardata({
-        ...sidebardata,
-        electricWindows,
-      });
-    }
 
-    if (e.target.id === "fogLamp") {
-      const fogLamp = e.target.value;
-      setSidebardata({
-        ...sidebardata,
-        fogLamp,
-      });
-    }
-    if (e.target.id === "sunRoof") {
-      const sunRoof = e.target.value;
-      setSidebardata({
-        ...sidebardata,
-        sunRoof,
-      });
-    }
-    if (e.target.id === "centralLocking") {
-      const centralLocking = e.target.value;
-      setSidebardata({
-        ...sidebardata,
-        centralLocking,
-      });
-    }
     if (e.target.id === "price_from") {
       const price_from = e.target.value;
       setSidebardata({
         ...sidebardata,
         price_from,
-      });
-    }
-    if (e.target.id === "price_to") {
-      const price_to = e.target.value;
-      setSidebardata({
-        ...sidebardata,
-        price_to,
       });
     }
   };
@@ -174,15 +111,7 @@ export default function Search() {
     urlParams.set("year", sidebardata.year);
     urlParams.set("color", sidebardata.color);
     urlParams.set("city", sidebardata.city);
-    urlParams.set("distance", sidebardata.distance);
-    urlParams.set("ABS", sidebardata.ABS);
-    urlParams.set("cdPlayer", sidebardata.cdPlayer);
-    urlParams.set("electricWindows", sidebardata.electricWindows);
-    urlParams.set("fogLamp", sidebardata.fogLamp);
-    urlParams.set("sunRoof", sidebardata.sunRoof);
-    urlParams.set("centralLocking", sidebardata.centralLocking);
     urlParams.set("price_from", sidebardata.price_from);
-    urlParams.set("price_to", sidebardata.price_to);
 
     const searchQuery = urlParams.toString();
 
@@ -342,16 +271,7 @@ export default function Search() {
               onChange={handleChange}
             ></input>
           </div>
-          {/*    <div className="searchTerm-div">
-            <label className="search-label">Mileage up to :</label>
-            <input
-              type="Number"
-              id="distance"
-              placeholder="Max distance is ..."
-              className="searchTerm-input"
-              onChange={handleChange}
-            ></input>
-          </div>*/}
+
           <div className="searchTerm-div">
             <label className="search-label">Price From :</label>
             <input
@@ -362,15 +282,6 @@ export default function Search() {
               className="searchTerm-input"
               onChange={handleChange}
             ></input>
-            {/* <label className="search-label">To:</label>
-            <input
-              type="Number"
-              min={20000000}
-              id="price_to"
-              placeholder="Price to ..."
-              className="searchTerm-input"
-              onChange={handleChange}
-            ></input>*/}
           </div>
           <div className="searchTerm-div">
             <label className="search-label">Place City :</label>
@@ -398,69 +309,6 @@ export default function Search() {
               <option value={"Al-Hasakah"}>Al-Hasakah</option>
             </select>
           </div>
-          {/*</div> <div className="more-details-div">
-            <label className="more-details-label">More Features:</label>
-            <div className="checkbok-div">
-              <input
-                type="checkbox"
-                id="ABS"
-                className="checkbox-element"
-                onChange={handleChange}
-                value={sidebardata.ABS}
-              />
-              <span>ABS</span>
-            </div>
-            <div className="checkbok-div">
-              <input
-                type="checkbox"
-                id="cdPlayer"
-                className="checkbox-element"
-                onChange={handleChange}
-                value={sidebardata.cdPlayer}
-              />
-              <span>Cd Player</span>
-            </div>
-            <div className="checkbok-div">
-              <input
-                type="checkbox"
-                id="electricWindows"
-                className="checkbox-element"
-                onChange={handleChange}
-                value={sidebardata.electricWindows}
-              />
-              <span>Electric Windows</span>
-            </div>
-            <div className="checkbok-div">
-              <input
-                type="checkbox"
-                id="fogLamp"
-                className="checkbox-element"
-                onChange={handleChange}
-                value={sidebardata.fogLamp}
-              />
-              <span>Fog Lamp</span>
-            </div>
-            <div className="checkbok-div">
-              <input
-                type="checkbox"
-                id="sunRoof"
-                className="checkbox-element"
-                onChange={handleChange}
-                value={sidebardata.sunRoof}
-              />
-              <span>Sun Roof</span>
-            </div>
-            <div className="checkbok-div">
-              <input
-                type="checkbox"
-                id="centralLocking"
-                className="checkbox-element"
-                onChange={handleChange}
-                value={sidebardata.centralLocking}
-              />
-              <span>Central Locking</span>
-            </div>
-          </div>*/}
 
           <button type="submit" className="search-btn">
             Search

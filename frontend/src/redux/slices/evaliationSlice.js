@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-//we put actions and states here
+
 const evaliationSlice = createSlice({
   name: "evaliation",
   initialState: {

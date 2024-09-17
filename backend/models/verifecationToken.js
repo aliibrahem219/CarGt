@@ -24,7 +24,6 @@ const VerificationToken = mongoose.model(
   "VerificationToken",
   VerificationTokenSchema
 );
-//Validate Create VerificationToken
 
 module.exports = {
   VerificationToken,

@@ -91,7 +91,6 @@ const CreatePost = () => {
           id="file"
           onChange={(e) => {
             setFile(e.target.files[0]);
-            //setFile(e.target.files[0]);
           }}
           accept="image/*"
         />

@@ -9,7 +9,7 @@ const UpdateProfileModel = ({ setUpdateprofile, profile }) => {
   const [phoneNumber, setPhonenumber] = useState(profile?.phoneNumber);
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  //const { profile } = useSelector((state) => state.profile);
+
   //form submit handler
   const formSubmitHandler = (e) => {
     e.preventDefault();

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-//we put actions and states here
+
 const postSlice = createSlice({
   name: "post",
   initialState: {
@@ -11,7 +11,7 @@ const postSlice = createSlice({
     post: null,
     comments: [],
   },
-  //we put actions that effect on states in reducers
+
   reducers: {
     setPosts(state, action) {
       state.posts = action.payload;

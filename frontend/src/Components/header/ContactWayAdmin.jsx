@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./about-us.css";
 const ContactWayAdmin = ({ setContact }) => {
   const [message, setMessage] = useState("");
-  // const [amount, setAmount] = useState("");
+
   const onChangeFun = (e) => {
     setMessage(e.target.value);
   };

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-//we put actions and states here
+
 const profileSlice = createSlice({
   name: "profile",
   initialState: {
@@ -10,7 +10,6 @@ const profileSlice = createSlice({
     profiles: [],
   },
 
-  //we put actions that effect on states in reducers
   reducers: {
     setProfile(state, action) {
       state.profile = action.payload;

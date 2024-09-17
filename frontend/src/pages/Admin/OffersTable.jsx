@@ -16,7 +16,6 @@ import { useSelector, useDispatch } from "react-redux";
 const OffersTable = () => {
   const dispatch = useDispatch();
 
-  // const [highlited, setHighlited] = useState("Not Highlited");
   const { offers } = useSelector((state) => state.offer);
   useEffect(() => {
     dispatch(getALLOffers());

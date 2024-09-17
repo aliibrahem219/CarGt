@@ -65,7 +65,7 @@ export function uploadProfilePhoto(newPhoto) {
           },
         }
       );
-      //the data is the payload for action
+
       dispatch(profileActions.setProfilePhoto(data.profilePhoto));
       dispatch(authActions.setUserPhoto(data.profilePhoto));
       toast.success(data.message);
@@ -114,7 +114,7 @@ export function deleteProfile(userId) {
           Authorization: "Bearer " + getState().auth.user.token,
         },
       });
-      //the data is the payload for action
+
       dispatch(profileActions.setIsProfileDeleted());
       toast.success(data?.message);
       setTimeout(() => {
@@ -136,7 +136,7 @@ export function getUsersCount() {
           Authorization: "Bearer " + getState().auth.user.token,
         },
       });
-      //the data is the payload for action
+
       dispatch(profileActions.setUserCount(data));
     } catch (error) {
       console.log(error.message);
@@ -153,7 +153,7 @@ export function getAllUsersProfile() {
           Authorization: "Bearer " + getState().auth.user.token,
         },
       });
-      //the data is the payload for action
+
       dispatch(profileActions.setProfiles(data));
     } catch (error) {
       console.log(error.message);
